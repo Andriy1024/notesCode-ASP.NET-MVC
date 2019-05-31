@@ -1,0 +1,143 @@
+﻿
+@{
+    Layout = null;
+    ViewBag.Title = "notesCode";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="~/Content/img/ICON.ico" rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/myCss")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/highlight")
+    <link href="@Url.Content("~/Content/vs2015.css")" rel="stylesheet" type="text/css">
+    <script></script>
+</head>
+<body
+        <!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+         attribution=setup_tool
+         page_id="356399155096748"
+         theme_color="#4CCEB2">
+    </div>
+    <div class="hidden_login">
+        <div>
+            <form id="login">
+                <input type="text" name="login" placeholder="Login" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Log in</button>
+            </form>
+            <a href="">sign up</a>
+        </div>
+        <img src="~/Content/img/close2.png" id="close">
+    </div>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                @Html.ActionLink("</>notesCode","Index","Home")
+            </div>
+
+            <div class="menu tooltip" data-title="MENU">
+                <a href="#" class="menu-btn"><span></span></a>
+            </div>
+
+            <form onsubmit="return false;" id="search">
+                <input type="text" placeholder="Search doesn't work">
+                <input type="submit" value="seacrh">
+            </form>
+            @*<div id="authorization_btn" class="tooltip" data-title="Account">
+                <a href="">A</a>
+            </div>
+            <div class="authorization">
+                <ul>
+                    <li><a href="">name of user</a></li>
+                    <li><a href="">Log out</a></li>
+                </ul>
+            </div>*@
+            <div id="authorization_btn" class="tooltip popup" data-title="Log In">
+                <a href="#">in</a>
+            </div>
+            <div class="authorization">
+                <ul>
+                    <li><a href="#" class="popup">Log In</a></li>
+                    <li><a href="">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-flex">
+            <nav>
+                <ul>
+                    <li>@Ajax.ActionLink("About", "About", "Home", new AjaxOptions { UpdateTargetId = "main" })</li>
+                    <li><a href="">Articles</a></li>
+                    <li><a href="">Tests</a></li>
+                    @{
+                        var rv = new RouteValueDictionary();
+                        var strings = new string[] {"C++","Qt"};
+                        for (int i = 0; i < strings.Length; ++i)
+                        {
+                            rv["name[" + i + "]"] = strings[i];
+                        }
+                    }
+                    <li>@Ajax.ActionLink("C++", "Lessons", "Home",  rv , new AjaxOptions { UpdateTargetId = "main" })</li>
+                    @*<li>@Html.ActionLink("C++", "Lessons", "Home", rv, null)</li>*@
+                    <li><a href="#" class="tooltip" data-title="Empty">HTML/CSS</a></li>
+                    <li><a href="#" class="tooltip" data-title="Empty">JS</a></li>
+                    <li><a href="#" class="tooltip" data-title="Empty">PHP</a></li>
+                    <li><a href="#" class="tooltip" data-title="Empty">C#/.NET</a></li>
+                    <li><a href="#" class="tooltip" data-title="Empty">SQL</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <div class="manual_wrapper">
+            <div class="sidebar_of_manual">
+                <h2>ddfdf</h2>
+
+            </div>
+            <div class="content_of_manual" id="lesson">
+                @Html.Raw(File.ReadAllText(Server.MapPath("~/lessons/c/template.html")))
+            </div>
+        </div>
+        <script>
+        //sidebar
+        var btn_sidebar = $('.sidebar_of_manual h2');
+        var ul_sidebar = $('.sidebar_of_manual ul');
+        for (var t = 0; t < btn_sidebar.length; t++) {
+            let buffer = t;
+            $(btn_sidebar[buffer]).on('click', function () {
+                $(ul_sidebar[buffer]).slideToggle();
+            });
+        }
+        </script>
+    </main>
+    <footer>
+        <div class="wrapper">
+            <div class="social">
+                <a href="#">VK</a>&nbsp;&nbsp;
+                <a href="#">F</a>
+            </div>
+            <div class="signature"><p>2018 &copy; notesCode</p></div>
+            <button class="btn-top"></button>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/myJs")
+    @Scripts.Render("~/bundles/Ajax")
+
+</body>
+</html>

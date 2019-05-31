@@ -1,0 +1,85 @@
+﻿@using Microsoft.AspNet.Identity
+
+@{
+    Layout = null;
+}
+<div class="logo">
+    @Html.ActionLink("</>notesCode", "Index", "Home")
+</div>
+
+<div class="menu tooltip" data-title="MENU">
+    <a href="#" class="menu-btn"><span></span></a>
+</div>
+
+<form onsubmit="return false;" id="search">
+    <input type="text" placeholder="Search doesn't work">
+    <input type="submit" value="seacrh">
+</form>
+@if (Request.IsAuthenticated)
+{
+    <div id="authorization_btn" class="tooltip" data-title="Account">
+        <a href="">A</a>
+    </div>
+    <div class="authorization">
+        <ul>
+            <li>@Ajax.ActionLink(@User.Identity.GetUserName(), "UserProfile", "Manage", new { Layout = "ajax" }, new AjaxOptions { UpdateTargetId = "main" })</li>
+            <li>@Ajax.ActionLink("Log out", "Logout", "Account", null, new AjaxOptions { OnSuccess = "UpdateHeader" })</li>
+        </ul>
+    </div>
+}
+else
+{
+    <div id="authorization_btn" class="tooltip popup" data-title="Log In">
+        <a href="#">in</a>
+    </div>
+    <div class="authorization">
+        <ul>
+            <li><a href="#" class="popup">Log In</a></li>
+            <li>@Ajax.ActionLink("Sign Up", "Register", "Account",new { Layout = "ajax"}, new AjaxOptions { UpdateTargetId="main" })</li>
+        </ul>
+    </div>
+}
+<script>
+    try {
+        var hidden_login = document.getElementsByClassName("hidden_login")[0];
+        var div_in_hidden = hidden_login.getElementsByTagName('div')[0];
+        var body = document.getElementsByTagName('body')[0];
+        var close = document.getElementById('close');
+        hidden_login.classList.remove('show_login');
+        body.classList.remove('overflow_hidden');
+        for (var i = 0; i < 2; i++) {
+            document.getElementsByClassName('popup')[i].onclick = function (event) {
+                hidden_login.classList.add('show_login');
+                body.classList.add('overflow_hidden');
+                close.style.left = event.clientX + 10 + 'px';
+                close.style.top = event.clientY + 10 + 'px';
+            }
+        }
+        hidden_login.onclick = function (event) {
+            if (event.target == this) {
+                hidden_login.classList.remove('show_login');
+                body.classList.remove('overflow_hidden');
+            }
+        }
+        div_in_hidden.onmouseenter = function () {
+            close.style.display = 'none';
+        }
+        div_in_hidden.onmouseleave = function () {
+            close.style.display = 'block';
+        }
+        hidden_login.onmouseleave = function () {
+            close.style.display = 'none';
+        }
+        hidden_login.onmouseenter = function () {
+            close.style.display = 'block';
+        }
+        hidden_login.onmousemove = function (event) {
+            if (event.target !== this) return false;
+            close.style.left = event.clientX + 10 + 'px';
+            close.style.top = event.clientY + 10 + 'px';
+        }
+       
+    } catch (e) {
+        console.log(e);
+    }
+</script>

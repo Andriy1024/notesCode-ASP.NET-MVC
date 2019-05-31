@@ -1,0 +1,48 @@
+﻿@model notesCode_ASP_NET_MVC.Models.RegisterModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = ViewBag.Layout;
+}
+
+<div class="wrapper reg">
+    <h1>Registration</h1>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "") <br />
+
+        <label>
+            @Html.ValidationMessageFor(model => model.Email, null, new { style = "color:red;" })
+            Email: <br /> @Html.EditorFor(m => m.Email)
+         </label>
+        <label>
+            @Html.ValidationMessageFor(model => model.UserName, null, new { style = "color:red;" })
+            Login:<br>@Html.EditorFor(m => m.UserName)
+        </label>
+        <label>
+            @Html.ValidationMessageFor(model => model.Name, null, new { style = "color:red;" })
+            Your name:<br>@Html.EditorFor(m => m.Name)
+        </label>
+
+        <label>
+            @Html.ValidationMessageFor(model => model.Secondname, null, new { style = "color:red;" })
+            Your secondname:<br>@Html.EditorFor(m => m.Secondname)
+        </label>
+        <label>
+            @Html.ValidationMessageFor(model => model.Age, null, new { style = "color:red;" })
+            Age:<br>@Html.EditorFor(m => m.Age)
+        </label>
+        <label>
+            @Html.ValidationMessageFor(model => model.Password, null, new { style = "color:red;" })
+            Password:<br>@Html.EditorFor(m => m.Password)
+        </label>
+
+        <label>
+            @Html.ValidationMessageFor(model => model.PasswordConfirm, null, new { style = "color:red;" })
+            Password confirm:<br>@Html.EditorFor(m => m.PasswordConfirm)
+        </label>
+        <input type="submit" value="Sign up" />
+    }
+</div>
+

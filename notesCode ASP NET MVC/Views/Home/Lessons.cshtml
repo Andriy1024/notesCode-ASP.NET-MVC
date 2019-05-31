@@ -1,0 +1,36 @@
+﻿@model List<notesCode_ASP_NET_MVC.Models.Course>
+@{
+    Layout = null;
+    ViewBag.Title = "notesCode";
+}
+
+    <div class="manual_wrapper">
+        <div class="sidebar_of_manual">
+            @foreach (var course in Model)
+            {
+                <h2>@course.Name</h2>
+                <ul>
+                    @foreach (var lesson in course.Lessons)
+                    {
+                        <li>@Ajax.ActionLink(lesson.Subject, "ReadFile", "Home", new { path = "~/Lessons/" + lesson.Filepath},new AjaxOptions { UpdateTargetId = "lesson" })</li>
+                    }
+                </ul>
+            }
+
+        </div>
+        <div class="content_of_manual" id="lesson">
+            @Html.Raw(File.ReadAllText(Server.MapPath("~/lessons/c/main.html")))
+        </div>
+    </div>
+    <script>
+        //sidebar
+        var btn_sidebar = $('.sidebar_of_manual h2');
+        var ul_sidebar = $('.sidebar_of_manual ul');
+        for (var t = 0; t < btn_sidebar.length; t++) {
+            let buffer = t;
+            $(btn_sidebar[buffer]).on('click', function () {
+                $(ul_sidebar[buffer]).slideToggle();
+            });
+        }
+    </script>
+

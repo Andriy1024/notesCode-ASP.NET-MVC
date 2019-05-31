@@ -1,0 +1,34 @@
+﻿@model notesCode_ASP_NET_MVC.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "UserAccount";
+    Layout = ViewBag.Layout;
+}
+
+<div class="user">
+    <h1>Profile</h1>
+    <p>Name: @Html.DisplayFor(m=>m.Name)</p>
+    <p>Secondname: @Html.DisplayFor(m => m.Secondname)</p>
+    <p>Login: @Html.DisplayFor(m => m.UserName)</p>
+    <p>Age: @Html.DisplayFor(m => m.Age)</p>
+    <p>Email: @Html.DisplayFor(m=>m.Email)</p>
+    <p>Тест з С++: Правильних відповідей @Html.DisplayFor(m => m.RightAnswers_of_CpluplusTest)</p>
+    <hr />
+    <p>Change password:</p>
+    @using (Ajax.BeginForm("ResetPassword", "Account", new AjaxOptions { UpdateTargetId = "ChangePass" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "")
+        @Html.HiddenFor(m=>m.UserName);
+        <p>Old password: @Html.Password("Password") @Html.ValidationMessage("Password", null, new { style = "color:red;" })</p>
+        <p>New password: @Html.Password("NewPassword") @Html.ValidationMessage("NewPassword", null, new { style = "color:red;" })</p>
+        <p>Confirm password: @Html.Password("PasswordConfirm") @Html.ValidationMessage("PasswordConfirm", null, new { style = "color:red;" })</p>
+        
+        <button type="submit">Change password</button>
+    }
+    <p id="ChangePass"></p>
+    <hr />
+    @Html.ActionLink("Log out", "Logout", "Account", new { returnUrl = "index" },null)
+    
+</div>
+

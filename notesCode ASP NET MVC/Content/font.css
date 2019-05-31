@@ -1,0 +1,12 @@
+@font-face{
+	font-family: "vodafone";
+	src: url("../fonts/Vodafone.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+} 
+@font-face{
+	font-family: "ubuntu";
+	src: url("../fonts/Ubuntu.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}  

@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="~/Content/img/ICON.ico" rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/myCss")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+        <!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+         attribution=setup_tool
+         page_id="356399155096748"
+         theme_color="#4CCEB2">
+    </div>
+   @Html.Partial("~/Views/Account/Login.cshtml")
+    <header>
+        <div class="header-top">
+            @Html.Partial("~/Views/Shared/_HeaderTopPartial.cshtml")
+        </div>
+        <div class="header-flex">
+            <nav>
+                <ul>
+                    <li>@Ajax.ActionLink("About", "About", "Home", new { Layout = "ajax" },new AjaxOptions { UpdateTargetId = "main" })</li>
+                    <li>@Ajax.ActionLink("Articles", "Articles", "Home", new { Layout = "ajax" }, new AjaxOptions { UpdateTargetId = "main" })</li>
+                    <li>@Ajax.ActionLink("Tests", "Tests", "Home", new { Layout = "ajax" },new AjaxOptions { UpdateTargetId = "main" })</li>
+                    @{
+                        var rv = new RouteValueDictionary();
+                        var strings = new string[] {"C++","Qt"};
+                        for (int i = 0; i < strings.Length; ++i)
+                        {
+                            rv["name[" + i + "]"] = strings[i];
+                        }
+                    }
+                    <li>@Ajax.ActionLink("C++", "Lessons", "Home",  rv , new AjaxOptions { UpdateTargetId = "main" })</li>
+                    @*<li>@Html.ActionLink("C++", "Lessons", "Home", rv, null)</li>*@
+                    <li><a href="#" class="tooltip" data-title="Empty">HTML/CSS</a></li>
+                    <li><a href="#" class="tooltip" data-title="Empty">JS</a></li>
+                    <li><a href="#" class="tooltip" data-title="Empty">PHP</a></li>
+                    <li><a href="#" class="tooltip" data-title="Empty">C#/.NET</a></li>
+                    <li><a href="#" class="tooltip" data-title="Empty">SQL</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        @RenderBody()
+    </main>   
+    <footer>
+        <div class="wrapper">
+            <div class="social">
+                <a href="#">VK</a>&nbsp;&nbsp;
+                <a href="#">F</a>
+            </div>
+            <div class="signature"><p>2018 &copy; notesCode</p></div>
+            <button class="btn-top"></button>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/myJs")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/Ajax")
+    @RenderSection("scripts", required: false)
+    <script >
+        function UpdateHeader(data) {
+            if (data == "ok") {
+                $(".header-top").load('@Url.Action("HeaderTopPartial", "Home")');
+
+                //location.reload();
+            } else { alert(data); }
+        }
+        @*console.log('@Url.Action("HeaderTopPartial", "Home")');*@
+      </script>
+</body>
+</html>

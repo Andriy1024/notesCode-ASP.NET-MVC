@@ -1,0 +1,24 @@
+﻿@model List<notesCode_ASP_NET_MVC.Models.Article>
+
+@{
+    Layout = ViewBag.Layout;
+}
+
+
+<div class="articles">
+    @foreach (var article in Model)
+    {
+        <article>
+            <h1>@Ajax.ActionLink(article.Name, "ReadFile", "Home", new { path = "~/Articles/" + article.Filepath }, new AjaxOptions { UpdateTargetId = "main" })</h1><hr />
+            <p>@Ajax.ActionLink(article.Description, "ReadFile", "Home", new { path = "~/Articles/" + article.Filepath }, new AjaxOptions { UpdateTargetId = "main" })</p>
+        </article>
+    }
+    <article>
+        <h1><a href="../articles/1.php">Про сім основних методологій розробки</a></h1><hr>
+        <p><a href="../articles/1.php">Розробка програмного продукту знає багато гідних методологій - інакше кажучи, усталених best practices. Вибір залежить від специфіки проекту, системи бюджетування, суб'єктивних переваг і навіть темпераменту керівника. У статті описані методології «Waterfall Model», «V-Model», «Incremental Model», «RAD Model», «Agile Model», «Iterative Model», «Spiral Model». </a></p>
+    </article>
+    <article>
+        <h1><a href="../articles/2.php">8 принципів планування розробки, що спрощують життя</a></h1><hr>
+        <p><a href="../articles/2.php">Планування - фундамент, на якому будується будь-який проект. І чим він міцніше, тим більше вірогідності, що проект буде успішним. Для цього і існує project management plan, що складається з трьох блоків: активностей (цілей, концепції проекту, ресурсні призначення і т.д.), завдань та ресурсів (люди, обладнання, гроші і т.д.).</a></p>
+    </article>
+</div>

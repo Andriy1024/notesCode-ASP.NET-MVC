@@ -1,0 +1,74 @@
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\ApplicationInsights.config
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\roslyn\csc.exe
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\roslyn\System.Collections.Immutable.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\roslyn\vbc.exe
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\roslyn\VBCSCompiler.exe
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\roslyn\VBCSCompiler.exe.config
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\notesCode ASP NET MVC.dll.config
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\notesCode ASP NET MVC.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\notesCode ASP NET MVC.pdb
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Antlr3.Runtime.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AI.Agent.Intercept.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AI.DependencyCollector.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AI.Web.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AI.WindowsServer.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.ApplicationInsights.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.Web.Infrastructure.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Newtonsoft.Json.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.Helpers.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.Mvc.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.Optimization.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.Razor.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.WebPages.Deployment.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.WebPages.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.WebPages.Razor.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\WebGrease.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AI.DependencyCollector.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AI.Web.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AI.WindowsServer.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.ApplicationInsights.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.Helpers.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.Mvc.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.Optimization.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.Razor.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.WebPages.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.WebPages.Deployment.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\System.Web.WebPages.Razor.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Antlr3.Runtime.pdb
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Newtonsoft.Json.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\obj\Debug\notesCode ASP NET MVC.csprojResolveAssemblyReference.cache
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\obj\Debug\notesCode ASP NET MVC.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\obj\Debug\notesCode ASP NET MVC.pdb
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\EntityFramework.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\EntityFramework.SqlServer.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\EntityFramework.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\EntityFramework.SqlServer.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AspNet.Identity.Core.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.Owin.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.Owin.Security.Cookies.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.Owin.Security.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.Owin.Security.OAuth.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Owin.dll
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AspNet.Identity.Core.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.Owin.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.Owin.Security.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.Owin.Security.Cookies.xml
+D:\C#\notesCode ASP NET MVC\notesCode ASP NET MVC\bin\Microsoft.Owin.Security.OAuth.xml
